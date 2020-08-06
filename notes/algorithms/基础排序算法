@@ -1,0 +1,145 @@
+前言
+
+- 深入总结八大排序算法以及相关的面试算法题
+- 总结其他算法
+
+## 进入算法的世界
+
+#### 1. 冒泡排序
+
+#### 2. 选择排序
+
+#### 3. 插入排序
+
+#### 4. 归并排序
+
+```
+//归并排序
+aux  [n...mid..mid+1..m]
+nums [a,b,c,d,e,f,g]
+
+
+private void merge(int[] nums, int left, int mid, int right) {
+	int[] aux = Arrays.copyOfRange(nums, left, right + 1);
+	int i = left, j = mid + 1;
+	for(int k = left; k <= right; k++) {
+		if(i > mid) {
+			nums[k] = aux[j - left];
+			j++;
+		} else if(j > right) {
+			nums[k] = aux[i - left];
+			i++;
+		} else if(aux[i - left] < aux[j - left]) {
+			nums[k] = aux[i - left];
+			i++;
+		} else {//aux[i-left] >= aux[j-left]
+			nums[k] = aux[j - left];
+			j++;
+		}
+	}
+}
+private void sort(int[] nums, int left, int right) {
+	if(left >= right) {
+		return;
+	}
+	int mid = (right - left) / 2 + left;
+	sort(nums, left, mid);
+	sort(nums, mid+1, right);
+	merge(nums, left, mid, right);
+}
+public void sort(int[] nums) {
+	sort(nums, 0, nums.length - 1);
+}
+```
+
+
+
+#### 5. 快速排序
+
+```
+//快速排序
+ nums   [a,b,c,d,e,f,g]
+         p
+         j
+                       k   
+           i  
+private int partition2(int[] nums, int lt, int gt) {
+	int p = nums[n];
+	int j = lt;
+	for(int i = lt; i <= gt; i++) {
+		if(nums[i] < p) {
+			swap(nums, ++j, i);
+		}
+	}
+	swap(nums, lt, j);
+	return j;
+}
+
+private int partition(int[] nums, int n, int m) {
+	int p = nums[n];
+	int j = n;
+	int k = m + 1;
+	int i = n + 1;
+	while(i < k) {
+		if(nums[i] < p) {
+			swap(nums, ++j, i++);
+		} else if(nums[i] > p) {
+			swap(nums, --k, i);
+		} else {// nums[i] == p
+			i++;
+		}
+	}
+	swap(nums, n, j);
+	return j;
+}
+private void swap(int[] nums, int n, int m) {
+	int tmp = nums[n];
+	nums[n] = nums[m];
+	nums[m] = tmp;
+}
+private void sort(int[] nums, int n, int m) {
+	if(n > m) {
+		return;
+	}
+	int p = partition(nums, n, m);
+	sort(nums, n, p - 1);
+	sort(nums, p + 1, m);
+} 
+public void sort(int[] nums) {
+	sort(nums, 0, nums.length);
+} 
+```
+
+
+
+#### 6. 希尔排序
+
+#### 7. 基数排序
+
+#### 8. 桶排序
+
+
+
+
+
+####经典排序
+
+| 排序名  |  时间复杂度   |    空间复杂度     |  优势  |  劣势  |           适用场景            | 稳定性  |
+| :--: | :------: | :----------: | :--: | :--: | :-----------------------: | :--: |
+| 冒泡排序 |  O(n^2)  |     O(1)     |      |      |                           |  稳定  |
+| 插入排序 |  O(n^2)  |     O(1)     |      |      |                           |  稳定  |
+| 归并排序 | O(nlogn) |     O(N)     |      |      |                           |  稳定  |
+| 计数排序 |          |     O(M)     |      |      | 对于用例少的数据，比如对人的年龄排序或者身高排序。 |  稳定  |
+| 基数排序 |          |     O(M)     |      |      |                           |  稳定  |
+| 桶排序  |          |              |      |      |                           |  稳定  |
+| 选择排序 |  O(n^2)  |     O(1)     |      |      |                           | 不稳定  |
+| 快速排序 | O(nlogn) | O(logn)~O(n) |      |      |                           | 不稳定  |
+| 希尔排序 | O(nlogn) |     O(1)     |      |      |                           | 不稳定  |
+| 堆排序  | O(nlogn) |     O(1)     |      |      |                           | 不稳定  |
+
+> 除非面试题特别说明，否则认为要排序的数据范围是均匀分布的。
+
+> 快速排序之所以叫快速排序，并不代表它比堆排序和归并排序优良。在最好情况下，它的渐进复杂度与 堆排序和归并排序是相同的。知识快速排序的常量系数比较小而已。
+
+> 类库上提供的排序，并不是某一种算法的实现，而是综合了多种排序的综合排序。当数组比较小时，使用插入排序；当数组较大时，选择快速排序或其他的O(nlogn)的排序。
+

@@ -1,5 +1,7 @@
-package com.bruis.algorithminjava.datastructures;
+package com.bruis.algorithminjava.datastructures.stack;
 
+
+import com.bruis.algorithminjava.datastructures.array.MyArray;
 
 /**
  * @author LuoHaiYang

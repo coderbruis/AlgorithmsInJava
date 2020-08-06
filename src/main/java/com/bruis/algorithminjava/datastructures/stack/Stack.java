@@ -1,4 +1,4 @@
-package com.bruis.algorithminjava.datastructures;
+package com.bruis.algorithminjava.datastructures.stack;
 
 /**
  * @author LuoHaiYang

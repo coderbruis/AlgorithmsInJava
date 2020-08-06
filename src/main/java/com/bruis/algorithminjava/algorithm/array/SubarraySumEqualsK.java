@@ -1,4 +1,4 @@
-package com.bruis.algorithminjava.algorithm;
+package com.bruis.algorithminjava.algorithm.array;
 
 import java.util.HashMap;
 import java.util.Map;

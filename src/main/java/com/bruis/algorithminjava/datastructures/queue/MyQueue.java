@@ -1,4 +1,6 @@
-package com.bruis.algorithminjava.datastructures;
+package com.bruis.algorithminjava.datastructures.queue;
+
+import com.bruis.algorithminjava.datastructures.array.MyArray;
 
 /**
  * @author LuoHaiYang

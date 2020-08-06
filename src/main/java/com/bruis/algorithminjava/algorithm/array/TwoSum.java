@@ -1,10 +1,13 @@
-package com.bruis.algorithminjava.algorithm;
+package com.bruis.algorithminjava.algorithm.array;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * @author LuoHaiYang
+ *
+ * url: https://leetcode-cn.com/problems/two-sum/
+ *
  */
 public class TwoSum {
 

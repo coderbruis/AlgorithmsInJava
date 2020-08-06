@@ -1,4 +1,4 @@
-package com.bruis.algorithminjava.algorithm;
+package com.bruis.algorithminjava.algorithm.stack;
 
 import java.util.Stack;
 
