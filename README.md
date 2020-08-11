@@ -2,6 +2,25 @@
 
 本项目主要用于自己在工作之余记录用Java实现的算法和数据结构的源码；同时还会记录自己刷leetcode的题解思路等；
 
+# 经典排序算法
+
+- [经典排序算法](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
+
+# 经典数据结构
+
+- [数组]()
+- [栈和队列]()
+- [链表]()
+- [二分搜索树]()
+- [集合和映射]()
+- [堆和优先队列]()
+- [线段树]()
+- [Trie]()
+- [并查集]()
+- [AVL]()
+- [红黑树]()
+- [哈希表]()
+
 # leetcode专区
 
 ## 1. 数组
@@ -25,11 +44,5 @@
 
 ## 3. 链表
 
-
-# 经典排序算法
-
-- [经典排序算法](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
-
-# 数据结构
 
 ==================== 持续更新 ===================
