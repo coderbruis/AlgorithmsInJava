@@ -13,7 +13,7 @@
 - [链表]()
 - [二分搜索树]()
 - [集合和映射]()
-- [堆和优先队列]()
+- [堆和优先队列](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/datastructures/%E5%A0%86%E5%92%8C%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97.md)
 - [线段树]()
 - [Trie]()
 - [并查集]()
