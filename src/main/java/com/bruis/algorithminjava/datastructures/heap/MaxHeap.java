@@ -46,6 +46,8 @@ public class MaxHeap {
         size = n;
 
         // 这里需要注意，size / 2 得到的索引是二叉堆中最后一个非叶子节点。
+        // 注意！！！ 这里size / 2 是因为 data 从1开始的，所以最后一个非叶子节点为：size / 2
+        // 如果是从0开始，则：size - 1
         for (int i = size / 2; i > 0; i++) {
             siftDown(i);
         }
