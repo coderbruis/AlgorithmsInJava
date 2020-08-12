@@ -1,52 +1,10 @@
+package com.bruis.algorithminjava.datastructures.heap;
 
-# 前言
+import java.util.Random;
 
-下面先了解下二叉堆的基础知识
-
-## 1. 二叉堆
-
-二叉堆是一棵完全二叉树，如下图：
-![二叉堆图](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/pictures/heap01.png)
-
-完全二叉树性质如下：
-- 元素顺序排列成树的形状
-- 堆中某节点的值总是不大于其父节点的值
-- 上图这种父亲节点值最大，则表示的是最大堆
-
-同理，可以让父亲节点值最小，则可以被称为最小堆。
-
-这里，给出一个最大堆和最小堆的定义：
-
-**最大堆**
-
-> 堆中某个节点的值总是不大于其父节点的值
-
-**最小堆**
-
-> 堆中某个节点的值总是不小于其父节点的值
-
-### 1.1 用数组存储二叉堆
-
-如将下列数组存储为二叉堆：
-
-```
-[62, 41, 30, 28, 16, 22, 13, 19, 17, 15]
-  0   1   2   3   4   5   6   7   8   9
-```
-将数组转化为二叉堆：
-![二叉堆图](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/pictures/heap02.png)
-
-对于上面的二叉堆，有以下三个比较重要的公式：
-
-```
-(i从0开始计算）
-parent(i) = (i - 1) / 2      求当前节点的父节点的索引
-left child(i) = 2 * i + 1     求当前节点的左子节点的索引
-right child(i) = 2 * i + 2    求当前节点的右子节点的索引
-```
-
-构建代码：
-```
+/**
+ * @author LuoHaiYang
+ */
 public class MaxHeap {
 
     /**
@@ -242,40 +200,3 @@ public class MaxHeap {
         }
     }
 }
-```
-
-上浮Sift Up过程如下图：
-![二叉堆图](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/pictures/heap03.png)
-
-插入的新节点与父亲节点比较大小，如果比父亲节点大，则进行swap交换，直至到符合完全二叉树性质。
-
-取出最大值以及下沉过程：
-先取出最大值，让数组最后一位元素替换堆顶元素，然后往下沉。
-![二叉堆图](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/pictures/heap04.png)
-
-![二叉堆图](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/pictures/heap05.png)
-
-heapify二叉堆化，即从最后一个非叶子节点开始siftDown，即图中蓝色图表示的节点元素。
-![二叉堆图](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/pictures/heap06.png)
-
-
-## 2. 优先队列
-
-> 普通队列：先进先出，后进后出；
-
-> 优先队列：出队顺序和入队顺序无关；和优先级有关；
-
-在Windows操作系统中，任务管理器的任务就是根据优先级别来进行管理的，**动态选择优先级最高的任务执行。**
-
-普通线性结构和顺序线性结构对比
-|        |   入队    | 出队（拿出最大元素） |
-| :----: | :-----: | :--------: |
-| 普通线性结构 |  O(1)   |    O(n)    |
-| 顺序线性结构 |  O(n)   |    O(1)    |
-|   堆    | O(logn) |  O(logn)   |
-
-对于线性结构出队时（数组），需要扫描整个队列；对于顺序线性结构（链表），入队时由于需要维持顺序性则需要扫描整个队列；
-
-**普通线性结构**入队O(1)分析，因为入队不考虑顺序性，所以排在队尾即可。
-
-**顺序线性结构**入队O(n)分析，入队需要考虑顺序性，需要进行调度。
