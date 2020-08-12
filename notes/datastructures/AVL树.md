@@ -323,7 +323,7 @@ if(balanceFactor > 1 && getBalanceFactor(node.left) < 0) {
 
 至此，对于所有的情况，都已经分析完了。
 
-####9. 删除节点
+### 9. 删除节点
 
 删除的节点，分为两种：
 

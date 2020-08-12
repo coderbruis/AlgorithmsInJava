@@ -17,7 +17,7 @@
 - [线段树]()
 - [Trie树]()
 - [并查集]()
-- [AVL数据]()
+- [AVL树](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/datastructures/AVL%E6%A0%91.md)
 - [红黑树]()
 - [哈希表]()
 
