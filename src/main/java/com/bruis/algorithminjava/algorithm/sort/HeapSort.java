@@ -27,7 +27,9 @@ public class HeapSort {
         // [.......]k
         // [.....] ba
         for (int i = n-1; i > 0; i--) {
+            // 由于上面执行过下沉操作，所以已经是最大堆（但没有排序完）。所以此时swap就将最大值替换到数组末尾。
             swap(arr, 0, i);
+            // 由于siftDown中是判断 2*k+1 < n ，所以就是对n-1进行下沉操作；
             siftDown2(arr, i, 0);
         }
     }
@@ -72,8 +74,7 @@ public class HeapSort {
             arr[k] = arr[j];
             k = j;
         }
-        // 就是这一个替换，让此堆变成了最小堆;
-        // 这是因为while循环结束后，最小值以及替换到了arr[k]了，所以
+        // 将最小元素替换到k的位置
         arr[k] = e;
     }
 
