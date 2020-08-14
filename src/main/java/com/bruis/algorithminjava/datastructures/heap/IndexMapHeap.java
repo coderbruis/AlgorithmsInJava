@@ -1,5 +1,8 @@
 package com.bruis.algorithminjava.datastructures.heap;
 
+import java.util.Arrays;
+import java.util.Random;
+
 /**
  *
  * 索引堆
@@ -52,11 +55,9 @@ public class IndexMapHeap {
             throw new IllegalArgumentException("容量已满, 插入失败");
         }
 
-        count++;
-        i++;
-        arr[i] = item;
-        index[i] = i;
-        shiftUp(i);
+        arr[++i] = item;
+        index[++count] = i;
+        shiftUp(count);
     }
 
     /**
@@ -123,7 +124,7 @@ public class IndexMapHeap {
     private void shiftUp(int k) {
         // 堆顶元素则直接跳过
         while (k > 1 && arr[index[k/2]] < arr[index[k]]) {
-            swap(index, k/2, k);
+            swap(index, k, k/2);
             k /= 2;
         }
     }
@@ -184,4 +185,55 @@ public class IndexMapHeap {
         arr[i] = arr[k];
         arr[k] = tmp;
     }
+
+    // ============================= 更新堆元素优先级 =============================
+
+    public boolean testIndexes() {
+        int[] copyIndex = new int[count + 1];
+
+        for (int i = 0; i <= count; i++) {
+            copyIndex[i] = index[i];
+        }
+
+        copyIndex[0] = 0;
+        Arrays.sort(copyIndex);
+
+        for (int i = 2; i <= count; i++) {
+            if (copyIndex[i-1] + 1 != copyIndex[i]) {
+                System.out.println("错误，索引堆排序错误！");
+                break;
+            }
+        }
+        return true;
+    }
+
+    public void testSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i-1] < arr[i]) {
+                System.out.println("索引堆排序失败！");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 10;
+        IndexMapHeap indexMapHeap = new IndexMapHeap(n);
+        Random random = new Random();
+        for (int i = 0; i < n; i++) {
+            // insert中仅仅一个shiftUp操作是不能保证索引堆数据的排好序了
+            indexMapHeap.insert(i,random.nextInt(1000));
+        }
+
+        // 判断索引堆索引是否是连续
+        System.out.println(indexMapHeap.testIndexes());
+
+        int[] result = new int[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = indexMapHeap.extractMax();
+        }
+
+        indexMapHeap.testSort(result);
+
+    }
+
 }
