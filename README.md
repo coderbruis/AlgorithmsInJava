@@ -7,11 +7,12 @@
 - [冒泡排序]() （待续） 
 - [选择排序]()（待续）
 - [插入排序]()（待续）
-- [归并排序]()（待续）
+- [归并排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md) 【更新中】
 - [快速排序]()（待续）
 - [希尔排序]()（待续）
 - [桶排序]() （待续）
 - [基数排序]()（待续）
+- [堆排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%A0%86%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md) 【更新中】
 
 # 经典算法
 
@@ -29,11 +30,11 @@
 - [链表]()（待续）
 - [二分搜索树]()（待续）
 - [集合和映射]()（待续）
-- [堆和优先队列](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/datastructures/%E5%A0%86%E5%92%8C%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97.md)
+- [堆和优先队列](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/datastructures/%E5%A0%86%E5%92%8C%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97.md) 【更新中】
 - [线段树]() （待续）
 - [Trie树]() （待续）
 - [并查集]()（待续）
-- [AVL树](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/datastructures/AVL%E6%A0%91.md)
+- [AVL树](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/datastructures/AVL%E6%A0%91.md)【更新中】
 - [红黑树]() （待续）
 - [哈希表]()（待续）
 
