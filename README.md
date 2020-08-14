@@ -47,12 +47,12 @@
 # 经典算法
 
 
-KMP算法 
-马拉车算法
-Prim算法      
-Krusk算法
-Dijkstra算法 
-Bellman-Ford算法 
+- KMP算法 
+- 马拉车算法
+- Prim算法      
+- Krusk算法
+- Dijkstra算法 
+- Bellman-Ford算法 
             
 # 经典数据结构    
             
