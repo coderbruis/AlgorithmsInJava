@@ -1,16 +1,14 @@
 package com.bruis.algorithminjava.algorithm.sort;
 
-import java.util.Random;
-
 /**
  *
  * 原地堆排序！ 不需要额外的空间
  *
- * 这里构造出来的是一个最小堆！！！！ 即数组的值依次递增
+ * 这里构造出来的是一个最小堆
  *
  * @author LuoHaiYang
  */
-public class HeapSort {
+public class HeapSort02 {
 
     public static void sort(int[] arr) {
         int n = arr.length;
