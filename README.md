@@ -2,6 +2,9 @@
 
 本项目主要用于自己在工作之余记录用Java实现的算法和数据结构的源码；同时还会记录自己刷leetcode的题解思路等；
 
+> Tip：如果读者电脑无法浏览到github图片，则需要设置hosts配置文件, 解决办法：
+[解决方案](https://zhuanlan.zhihu.com/p/107691233)
+
 # 经典排序算法
 
 - [冒泡排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)  
