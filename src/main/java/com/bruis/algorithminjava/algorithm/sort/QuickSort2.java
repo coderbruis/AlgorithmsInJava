@@ -3,7 +3,7 @@ package com.bruis.algorithminjava.algorithm.sort;
 /**
  * 快速排序的优化
  *
- * 对于近乎有序的数组，快速排序会退化为O(N^2)。
+ * 对于近乎有序的数组，快速排序会退化为O(n^2)。
  *
  * @author LuoHaiYang
  */
@@ -22,7 +22,7 @@ public class QuickSort2 {
 
         //int p = arr[left];
         // ===================================== 优化2 =====================================
-        // 避免快排退化为O(N^2)
+        // 避免快排退化为O(n^2)
         swap(arr, left, (int)Math.random()*(right - left + 1) + left);
 
         int p = arr[left];

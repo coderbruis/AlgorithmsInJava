@@ -16,10 +16,16 @@ public class QuickSort2Ways {
 
         while(true) {
 
+            /**
+             * 这里arr[i] < p 和 arr[j] > p 是为了避免出现 arr[i] == p 和 arr[j] == p的情况。
+             * 如果arr[i] == p，则直接进行了i++了，则数组的p会变得极度不平衡，即 所有小于等于p的值都分在了左边，
+             * 这种情况下，快速排序的平均时间复杂度会退化成：O(n^2)
+             *
+             */
+
             while(i <= right && arr[i] < p) {
                 i++;
             }
-
             while(j >= 0 && arr[j] > p) {
                 j--;
             }

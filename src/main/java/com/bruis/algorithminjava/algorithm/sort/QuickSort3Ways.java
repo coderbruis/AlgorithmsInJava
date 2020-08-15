@@ -13,7 +13,7 @@ public class QuickSort3Ways {
             InsertionSort.sort(arr);
             return;
         }
-        // 增加随机值，防止快排退化为O(N^2)
+        // 增加随机值，防止快排退化为O(n^2)
         swap(arr,left, (int)Math.random()*(right - left - 1) + left);
 
         int p = arr[left];
