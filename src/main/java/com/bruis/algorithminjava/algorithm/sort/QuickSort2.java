@@ -1,9 +1,7 @@
 package com.bruis.algorithminjava.algorithm.sort;
 
 /**
- *
  * 快速排序的优化
- *
  *
  * 对于近乎有序的数组，快速排序会退化为O(N^2)。
  *
@@ -22,6 +20,11 @@ public class QuickSort2 {
      */
     private static int partition(int[] arr, int left, int right) {
 
+        //int p = arr[left];
+        // ===================================== 优化2 =====================================
+        // 避免快排退化为O(N^2)
+        swap(arr, left, (int)Math.random()*(right - left + 1) + left);
+
         int p = arr[left];
 
         // arr[left+1...j] < p;  arr[j+1...i) > p
@@ -31,18 +34,12 @@ public class QuickSort2 {
                 j++;
                 swap(arr, j, i);
             }
-            swap(arr, left, j);
         }
+        swap(arr, left, j);
         return j;
     }
 
     private static void sort(int[] arr, int left, int right) {
-/*
-        if (left >= right) {
-            return;
-        }
-*/
-
         // ===================================== 优化1 =====================================
         // 如果左右数值小于15，则通过插入排序来进行排序
         if (right - left <= 15) {

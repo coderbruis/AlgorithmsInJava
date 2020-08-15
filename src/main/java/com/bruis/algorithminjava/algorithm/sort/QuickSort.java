@@ -28,8 +28,8 @@ public class QuickSort {
                 j++;
                 swap(arr, j, i);
             }
-            swap(arr, left, j);
         }
+        swap(arr, left, j);
         return j;
     }
 
