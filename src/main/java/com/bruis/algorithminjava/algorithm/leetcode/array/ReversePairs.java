@@ -1,4 +1,4 @@
-package com.bruis.algorithminjava.algorithm.leetcode;
+package com.bruis.algorithminjava.algorithm.leetcode.array;
 
 import java.util.Arrays;
 
@@ -94,12 +94,16 @@ public class ReversePairs {
     /* ================================ 题解三（优化） ================================*/
 
     /**
+     *
+     * 相比解法二时间复杂度常数和空间复杂度更低
+     *
      * @param nums
      * @return
      */
     public int reversePairs3(int[] nums) {
-        if (nums == null || nums.length < 2)
+        if (nums == null || nums.length < 2) {
             return 0;
+        }
         int[] temp = new int[nums.length];
         System.arraycopy(nums, 0, temp, 0, nums.length);
 
@@ -118,10 +122,13 @@ public class ReversePairs {
         int count = 0;
 
         //merge()
-        int i = mid;//遍历左区域指针
-        int j = end;//遍历右区域指针
+        //遍历左区域指针
+        int i = mid;
+        //遍历右区域指针
+        int j = end;
 
-        int k = end;//临时区域指针
+        //临时区域指针
+        int k = end;
         while (i >= start && j >= mid + 1) {
             if (nums[i] > nums[j]) {
                 count += j - mid;
@@ -130,13 +137,35 @@ public class ReversePairs {
                 temp[k--] = nums[j--];
             }
         }
+
         //如果还有剩下没遍历的
-        while (i >= start)
+        while (i >= start) {
             temp[k--] = nums[i--];
-        while (j >= mid + 1)
+        }
+        while (j >= mid + 1) {
             temp[k--] = nums[j--];
+        }
 
         return count + left + right;
+    }
+
+    public int reversePairs4(int[] nums) {
+        if (nums == null || nums.length < 2) {
+            return 0;
+        }
+        int[] temp = new int[nums.length];
+        System.arraycopy(nums, 0, temp, 0, nums.length);
+        //int count = mergeCount2();
+        return 0;
+    }
+
+    private int mergeCount2(int[] nums, int[] temp, int start, int end) {
+        if (start >= end) {
+            return 0;
+        }
+        int mid = (start + end) << 1;
+        //int left = mergeCount2(nums, );
+        return 0;
     }
 
     public static void main(String[] args) {

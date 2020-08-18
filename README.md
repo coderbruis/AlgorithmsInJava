@@ -80,20 +80,18 @@
 
 题目名称 | 难度 | 地址 | 题解 
 ---|---|---|---
-两数之和 | 简单 | [https://leetcode-cn.com/problems/two-sum/](https://leetcode-cn.com/problems/two-sum/) | a 
-三数之和 | 中等 | [https://leetcode-cn.com/problems/3sum/](https://leetcode-cn.com/problems/3sum/) | a
-乘积最大子数组 | 中等 | [https://leetcode-cn.com/problems/maximum-product-subarray/](https://leetcode-cn.com/problems/maximum-product-subarray/) | b
-和为K的子数组 | 中等 | [https://leetcode-cn.com/problems/subarray-sum-equals-k/](https://leetcode-cn.com/problems/subarray-sum-equals-k/) | c
-
-数组类总数：4
+两数之和 | 简单 | [https://leetcode-cn.com/problems/two-sum/](https://leetcode-cn.com/problems/two-sum/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/array/TwoSum.java)
+三数之和 | 中等 | [https://leetcode-cn.com/problems/3sum/](https://leetcode-cn.com/problems/3sum/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/array/ThreeSum.java)
+乘积最大子数组 | 中等 | [https://leetcode-cn.com/problems/maximum-product-subarray/](https://leetcode-cn.com/problems/maximum-product-subarray/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/array/MaximumProductSubarray.java)
+和为K的子数组 | 中等 | [https://leetcode-cn.com/problems/subarray-sum-equals-k/](https://leetcode-cn.com/problems/subarray-sum-equals-k/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/array/SubarraySumEqualsK.java)
+逆序对 | 中等 | [https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/leetcode/ReversePairs.java)
+颜色分类 | 中等 | [https://leetcode-cn.com/problems/sort-colors/](https://leetcode-cn.com/problems/sort-colors/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/leetcode/sort-colors.java)
 
 ## 2. 堆栈
 
 题目名称 | 难度 | 地址 | 题解
 ---|---|---|---
-最小栈 | 简单 | [https://leetcode-cn.com/problems/min-stack/](https://leetcode-cn.com/problems/min-stack/) | a 
-
-堆栈类总数：1
+最小栈 | 简单 | [https://leetcode-cn.com/problems/min-stack/](https://leetcode-cn.com/problems/min-stack/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/stack/MinStack.java)
 
 ## 3. 链表
 
