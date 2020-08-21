@@ -7,15 +7,15 @@
 
 # 经典排序算法
 
-- [冒泡排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)  
-- [选择排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
-- [插入排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
-- [归并排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md) 
-- [快速排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
-- [希尔排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
-- [桶排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E6%A1%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md) 
-- [基数排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
-- [堆排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%A0%86%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md) 
+- [x] [冒泡排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)  
+- [x] [选择排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
+- [x] [插入排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
+- [x] [归并排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md) 
+- [x] [快速排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
+- [x] [希尔排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
+- [x] [桶排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E6%A1%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md) 
+- [x] [基数排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
+- [x] [堆排序](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/algorithms/%E5%A0%86%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md) 
 
 ## 排序算法总结
 
@@ -50,27 +50,27 @@
 # 经典算法
 
 
-- KMP算法 
-- 马拉车算法
-- Prim算法      
-- Krusk算法
-- Dijkstra算法 
-- Bellman-Ford算法 
+- [ ] KMP算法 
+- [ ] 马拉车算法
+- [ ] Prim算法      
+- [ ] Krusk算法
+- [ ] Dijkstra算法 
+- [ ] Bellman-Ford算法 
             
 # 经典数据结构    
             
-- 数组    
-- 栈和队列
-- 链表
-- 二分搜索树
-- 集合和映射
-- [堆和优先队列](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/datastructures/%E5%A0%86%E5%92%8C%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97.md) 【更新中】
-- 线段树 
-- Trie树
-- 并查集
-- [AVL树](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/datastructures/AVL%E6%A0%91.md)【更新中】
-- 红黑树 
-- 哈希表
+- [ ] 数组    
+- [ ] 栈和队列
+- [ ] 链表
+- [ ] 二分搜索树
+- [ ] 集合和映射
+- [x] [堆和优先队列](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/datastructures/%E5%A0%86%E5%92%8C%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97.md) 
+- [ ] 线段树 
+- [ ] Trie树
+- [ ] 并查集
+- [x] [AVL树](https://github.com/coderbruis/AlgorithmsInJava/blob/master/notes/datastructures/AVL%E6%A0%91.md)
+- [ ] 红黑树 
+- [ ] 哈希表
 
 ==================== 持续更新 ===================
 
