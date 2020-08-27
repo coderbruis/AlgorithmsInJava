@@ -14,10 +14,12 @@ public class TopKFrequentElements {
 
     /**
      *
-     *
+     * 桶排序
      *
      */
     public int[] topKFrequent(int[] nums, int k) {
+        List<Integer> res = new ArrayList<>();
+
         if (nums == null || nums.length < 2) {
             return nums;
         }
@@ -32,23 +34,29 @@ public class TopKFrequentElements {
             }
         }
 
-        List<Integer> result = new ArrayList<>();
-
-        Set<Map.Entry<Integer, Integer>> entries = count.entrySet();
-
-        for (Map.Entry<Integer, Integer> entry : entries) {
-            if (entry.getValue() > k) {
-                result.add(entry.getKey());
+        List<Integer>[] list = new List[nums.length];
+        for (int key : count.keySet()) {
+            // 让频率作为下标
+            int i = count.get(key);
+            if (list[i] == null) {
+                list[i] = new ArrayList<>();
             }
+            // key表示的是元素
+            list[i].add(key);
         }
 
+        for (int i = list.length - 1; i >= 0 && res.size() < k; i--) {
+            if (list[i] == null) {
+                continue;
+            }
+            res.addAll(list[i]);
 
-        int[] res = new int[result.size()];
-
-        for (int i = 0; i < result.size(); i++) {
-            res[i] = result.get(i);
         }
-        return res.length > 0 ? res : nums;
+        int[] result = new int[res.size()];
+        for (int i = 0; i < res.size(); i++) {
+            result[i] = res.get(i);
+        }
+        return result;
     }
 
     public static void main(String[] args) {
