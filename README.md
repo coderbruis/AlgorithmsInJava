@@ -133,6 +133,9 @@ Trie树
 题目名称 | 难度 | 地址 | 题解 
 ---|---|---|---
 两数之和 | 简单 | [https://leetcode-cn.com/problems/two-sum/](https://leetcode-cn.com/problems/two-sum/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/array/TwoSum.java)
+两数之和 II - 输入有序数组 | 简单 | [https://leetcode-cn.com/problems/two-sum-ii/](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/description/?utm_source=LCUS&utm_medium=ip_redirect_q_uns&utm_campaign=transfer2china) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/array/TwoSumII.java)
+反转字符串中的元音字母 | 简单 | [https://leetcode-cn.com/problems/reverse-vowels-of-a-string/](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/array/ReverseVowels.java)
+验证回文串 | 简单 | [https://leetcode-cn.com/problems/valid-palindrome/](https://leetcode-cn.com/problems/valid-palindrome/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/array/IsPalindrome.java)
 三数之和 | 中等 | [https://leetcode-cn.com/problems/3sum/](https://leetcode-cn.com/problems/3sum/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/array/ThreeSum.java)
 乘积最大子数组 | 中等 | [https://leetcode-cn.com/problems/maximum-product-subarray/](https://leetcode-cn.com/problems/maximum-product-subarray/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/array/MaximumProductSubarray.java)
 和为K的子数组 | 中等 | [https://leetcode-cn.com/problems/subarray-sum-equals-k/](https://leetcode-cn.com/problems/subarray-sum-equals-k/) | [题解](https://github.com/coderbruis/AlgorithmsInJava/blob/master/src/main/java/com/bruis/algorithminjava/algorithm/array/SubarraySumEqualsK.java)
@@ -147,7 +150,6 @@ Trie树
 
 ## 3. 链表
 
-==================== 持续更新 ===================
 
 # 支持
 
