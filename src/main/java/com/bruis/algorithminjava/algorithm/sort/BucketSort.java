@@ -1,5 +1,6 @@
 package com.bruis.algorithminjava.algorithm.sort;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -50,6 +51,7 @@ public class BucketSort {
 
     public static void main(String[] args) {
         BucketSort bucketSort = new BucketSort(10);
-        bucketSort.doSort(new int[]{4,1,3,2,6,9,9});
+        int[] sort = bucketSort.doSort(new int[]{4, 1, 3, 2, 20, 6, 9, 9, 21, 19});
+        System.out.println(Arrays.toString(sort));
     }
 }
