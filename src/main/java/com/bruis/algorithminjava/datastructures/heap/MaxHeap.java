@@ -1,204 +1,107 @@
 package com.bruis.algorithminjava.datastructures.heap;
 
-import java.util.Random;
-
 /**
- * @author LuoHaiYang
+ * @Author : haiyang.luo
+ * @Date : 2026/6/20 21:00
+ * @Description :
  */
 public class MaxHeap {
 
-    /**
-     * 注意，由于数组元素默认值为0，所以堆中元素不可为0
-     */
+    // 注意索引要从1开始
     private int[] data;
 
-    /**
-     * 记录数组中元素个数
-     */
+    // 堆中元素个数
     private int size;
 
-    /**
-     * 数组容量（初始化大小）
-     */
+    // 数组容量
     private int capacity;
 
-    public MaxHeap(int capacity) {
+    public MaxHeap() {}
+
+    public int[] getData() {
+        return data;
+    }
+
+    public MaxHeap(int size) {
+        capacity = size + 1;
         data = new int[capacity];
-        this.capacity = capacity;
-        size = 0;
-    }
-    public MaxHeap() {
-        data = new int[10];
-        capacity = 10;
-        size = 0;
     }
 
-    // ================================ heapify(二叉堆化) ========================
-
-    public MaxHeap(int[] data) {
-        int n = data.length;
-        this.data = new int[n+1];
-        capacity = n;
-
-        for (int i = 0; i < n; i++) {
-            this.data[i+1] = data[i];
-        }
-        size = n;
-
-        // 这里需要注意，size / 2 得到的索引是二叉堆中最后一个非叶子节点。
-        // 注意！！！ 这里size / 2 是因为 data 从1开始的，所以最后一个非叶子节点为：size / 2
-        // 如果是从0开始，则：size - 1
-        for (int i = size / 2; i > 0; i++) {
-            siftDown(i);
+    // 将输入的数组转化为二叉堆
+    // 核心思想：需要从最后一个非叶子树开始，
+    // 为什么不能从堆顶开始递增执行下层操作呢？
+    // 因为父节点调整时，需要依赖已经构建完成的子堆。这个思想其实和你学过的归并排序自底向上构建有序区间非常像，都是“先处理子问题，再处理父问题”。
+    private void heapify() {
+        for (int i = size/2; i > 0; i--) {
+            shiftDown(i);
         }
     }
 
     /**
-     * 返回堆中真实存在元素个数
-     * @return
+     * 添加一个元素i
+     * @param i
      */
-    public int size() {
-        return size;
+    public void insert(int i) {
+        checkCapacity();
+        data[++size] = i;
+        shiftUp(size);
     }
 
-    /**
-     * 返回堆中是否为空
-     * @return
-     */
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    /**
-     * 返回index索引其父亲节点
-     * @param index
-     * @return
-     */
-    private int parent(int index) {
-        if (index == 0) {
-            throw new IllegalArgumentException("index-0 doesn't have parent");
-        }
-        return (index - 1) / 2;
-    }
-
-    /**
-     * 返回index索引的左子节点
-     * @param index
-     * @return
-     */
-    private int leftChild(int index) {
-        return index * 2 + 1;
-    }
-
-    /**
-     * 返回index索引的右子节点
-     * @param index
-     * @return
-     */
-    private int rightChild(int index) {
-        return index * 2 + 2;
-    }
-
-    // ================================ 上浮 siftUp ========================
-
-    /**
-     * 向堆中添加元素
-     */
-    public void add(int i) {
-        // 注意size和capacity的关系，判断是否容量已经满了
-        // 向数组最后一位添加新元素
-        data[size] = i;
-        siftUp(size++);
-    }
-
-    /**
-     * 上浮过程
-     * @param k
-     */
-    private void siftUp(int k) {
-        // k 索引大于0，并且k索引元素值大于k父亲节点元素值
-        while (k > 0 && data[parent(k)] < data[k]) {
-            // k和parent(k)互换元素
-            swap(data, k, parent(k));
-            // 向上移动，让k为parent(k)再进行判断
-            k = parent(k);
+    // 上浮操作
+    private void shiftUp(int k) {
+        while (k > 1 && data[k] > data[k/2]) {
+            swap(k, k/2);
+            k /= 2;
         }
     }
 
-    // ================================ 下浮 siftDown ========================
-
-    /**
-     * 获取堆中最大元素
-     * @return
-     */
-    public int findMax() {
-        if (size == 0) {
-            throw new IllegalArgumentException("Can't find Max value!");
-        }
-        return data[0];
-    }
-
-    /**
-     * 取出堆中最大元素
-     * @return
-     */
-    public int extractMax() {
-        int max = findMax();
-        swap(data, 0, size - 1);
-        data[size - 1] = 0;
-        siftDown(0);
-        return max;
-    }
-
-    /**
-     * 下沉操作
-     * @param k
-     */
-    private void siftDown(int k) {
-        // 左子节点比数组元素小，则表示有子节点
-        while (leftChild(k) < size()) {
-            int j = leftChild(k);
-            // 如果k的有右子节点
-            if (j + 1 < size() && data[j + 1] > data[j]) {
-                // 所以让j为右子节点
-                // j = rightChild(k); 同
+    // 下层操作
+    private void shiftDown(int k) {
+        while (2 * k <= size) {
+            int j = 2 * k;
+            if (j + 1 <= size && data[j + 1] > data[j]) {
                 j++;
             }
-            // 此时data[k] 比leftChild和rightChild中的最大值都要大
-            if (data[k] > data[j]) {
+            if (data[k] >= data[j]) {
                 break;
             }
-            // leftChild和rightChild都比data[k]大，在互换之后，继续下一轮判断
-            swap(data, k, j);
-            // 互换位置，继续下一轮判断
+            swap(k, j);
             k = j;
         }
     }
 
-    // ================================ 替换操作 ========================
+    // ============================== 工具类 ==============================
 
-    private void swap(int[] arr, int i, int j) {
-        int tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
+    private void checkCapacity() {
+        if (size + 1 >= capacity) {
+            throw new IllegalStateException("Heap is full");
+        }
     }
 
+    private void swap(int a, int b) {
+        int tmp = data[a];
+        data[a] = data[b];
+        data[b] = tmp;
+    }
+
+    public int[] toArray() {
+        int[] arr = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            arr[i] = data[i + 1];
+        }
+
+        return arr;
+    }
+
+    // ============================== 工具类 ==============================
+
     public static void main(String[] args) {
-        int n = 100;
-        MaxHeap maxHeap = new MaxHeap(n);
-        Random random = new Random();
-        for (int i = 0; i < n; i++) {
-            maxHeap.add(random.nextInt(1000));
+        int[] heap = {100, 10, 12, 60, 70, 50, 40, 10, 20, 30};
+        MaxHeap maxHeap = new MaxHeap(heap.length);
+        for (int i = 0; i < heap.length; i++) {
+            maxHeap.insert(heap[i]);
         }
-        int[] result = new int[n];
-        for (int i = 0; i < n; i++) {
-            result[i] = maxHeap.extractMax();
-        }
-        // 测试是否是顺序的
-        for (int j = 1; j < n; j++) {
-            if (result[j-1] < result[j]) {
-                throw new IllegalArgumentException("Error!");
-            }
-        }
+        HeapPrinter.printHeap(maxHeap.toArray());
     }
 }
